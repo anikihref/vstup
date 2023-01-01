@@ -1,0 +1,66 @@
+@use './vars';
+
+.container {
+    max-width: vars.$containerWidth;
+    padding: 10px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    min-height: 100%;
+    width: 100%;
+    margin: 50px 0;
+}
+
+// accordion section
+
+.accordion-section {
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    &__accordions {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        padding-top: 20px;
+
+        &::before {
+            content: '';
+            top: 0px;
+            background-color: #fff;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+        }
+    }
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__text {
+        color: #fff;
+        width: 80%;
+        min-width: 500px;
+        text-align: center;
+    }
+}

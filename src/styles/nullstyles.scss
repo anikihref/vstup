@@ -1,0 +1,44 @@
+@use './vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: vars.$font;
+  color: #fff;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background-color: vars.$black;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+p {
+  line-height: 165%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+}
+
+ul, ol {
+  list-style: none;
+}

@@ -1,0 +1,43 @@
+.navbar {
+    
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+    
+    &__list-item {
+        cursor: pointer; 
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        position: relative;
+        opacity: .6;
+        transition: .2s;
+        font-weight: 300;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            transition: .3s;
+            width: 0%;
+            left: 50%;
+            height: 1.5px;
+            position: absolute;
+            bottom: -5px;
+            background-color: #fff;
+        }
+
+        &.active::before {
+            width: 100%;
+            left: 0%;
+        }
+    }
+}

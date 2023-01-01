@@ -1,0 +1,49 @@
+.read-more {
+    background-color: #fff;
+    padding: 8px 20px;
+    width: fit-content;
+    border-radius: 60px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid transparent;
+
+    
+    &::before {
+        content: '>';
+        left: -30px;
+        transform: translateX(20px) scale(.5);
+    }
+
+    &::after {
+        content: '<';
+        right: -30px;
+        transform: translateX(-20px);
+    }
+
+    &::after, &::before {
+        top: -4px;
+        transition: .3s;
+        opacity: 0;
+        font-size: 2rem;
+        position: absolute;
+    }
+
+    &:hover::before, &:hover::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &:hover  {
+        border: 1px solid #fff;
+        background-color: #000;
+    }
+
+    &:hover &__link {
+        color: #fff;
+    }
+
+    &__link {
+        padding: 5px 20px;
+        color: #000;
+    }
+}
